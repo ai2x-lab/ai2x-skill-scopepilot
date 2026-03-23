@@ -1,0 +1,4 @@
+{
+  "idn_match": ["KEYSIGHT", "AGILENT"],
+  "channel_format": "CHAN{index}"
+}

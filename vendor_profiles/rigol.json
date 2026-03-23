@@ -1,0 +1,4 @@
+{
+  "idn_match": ["RIGOL"],
+  "channel_format": "CHAN{index}"
+}

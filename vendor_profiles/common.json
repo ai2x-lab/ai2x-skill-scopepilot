@@ -1,0 +1,52 @@
+{
+  "idn_match": [],
+  "channel_format": "CHAN{index}",
+  "value_map": {
+    "on": "1",
+    "off": "0"
+  },
+  "scale_rules": {
+    "vertical": {
+      "sequence": [1, 2, 5],
+      "min": 0.001,
+      "max": 10.0,
+      "unit": "V/div"
+    },
+    "time": {
+      "sequence": [1, 2, 5],
+      "min": 1e-9,
+      "max": 50.0,
+      "unit": "s/div"
+    }
+  },
+  "commands": {
+    "identify": "*IDN?",
+    "run_acquisition": ":RUN",
+    "stop_acquisition": ":STOP",
+    "set_channel_display": ":{channel}:DISPLAY {value}",
+    "set_vertical_scale": ":{channel}:SCALE {value}",
+    "set_time_scale": ":TIMEBASE:SCALE {value}",
+    "measure_source": ":MEASURE:SOURCE {channel}",
+    "measure": {
+      "vpp": ":MEASURE:VPP?",
+      "frequency": ":MEASURE:FREQUENCY?",
+      "vrms": ":MEASURE:VRMS?"
+    },
+    "capture": {
+      "setup": [],
+      "query_binary": ":DISPLAY:DATA? PNG"
+    }
+  },
+  "capabilities": {
+    "identify": true,
+    "run_acquisition": true,
+    "stop_acquisition": true,
+    "capture_screenshot": true,
+    "set_channel_display": true,
+    "set_vertical_scale": true,
+    "set_time_scale": true,
+    "measure_vpp": true,
+    "measure_frequency": true,
+    "measure_vrms": true
+  }
+}
